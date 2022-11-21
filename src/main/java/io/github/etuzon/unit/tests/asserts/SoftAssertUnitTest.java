@@ -1,6 +1,8 @@
 package io.github.etuzon.unit.tests.asserts;
 
-import org.apache.log4j.Logger;
+
+import java.util.logging.Logger;
+
 import org.testng.Assert;
 
 public class SoftAssertUnitTest {
@@ -56,7 +58,7 @@ public class SoftAssertUnitTest {
 		if (condition == false) {
 			errorMessage = "[Assertion Error] " + errorMessage;
 
-			logger.error(errorMessage);
+			logger.severe(errorMessage);
 
 			if (errors.isEmpty() == false) {
 				errors += "\n";
@@ -94,9 +96,9 @@ public class SoftAssertUnitTest {
 
 	private static void printInfoMessage(String message) {
 		if (infoMessageLevel == InfoMessageLogLevelEnum.TRACE) {
-			logger.trace(message);
+			logger.fine(message);
 		} else if (infoMessageLevel == InfoMessageLogLevelEnum.DEBUG) {
-			logger.debug(message);
+			logger.fine(message);
 		} else if (infoMessageLevel == InfoMessageLogLevelEnum.INFO) {
 			logger.info(message);
 		}
