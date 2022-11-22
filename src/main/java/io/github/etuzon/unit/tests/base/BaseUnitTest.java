@@ -1,8 +1,8 @@
 package io.github.etuzon.unit.tests.base;
 
 import java.lang.reflect.Method;
+import java.util.logging.Logger;
 
-import org.apache.log4j.Logger;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
